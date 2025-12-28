@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
   "name": "Cache Clearer",
-  "version": "1.3.0",
-  "description": "Clear browser cache with one click - useful for web development",
+  "version": "1.4.0",
+  "description": "Clear browser cache with one click - works on Chrome and Edge - useful for web development",
   "permissions": [
     "browsingData",
     "storage",

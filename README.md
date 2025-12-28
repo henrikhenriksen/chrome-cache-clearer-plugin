@@ -1,8 +1,8 @@
 # Cache Clearer
 
-A lightweight Chrome/Chromium extension for developers to quickly clear browser cache and other browsing data with one click or keyboard shortcut.
+A lightweight browser extension for Chrome, Edge, and other Chromium-based browsers. Quickly clear browser cache and other browsing data with one click or keyboard shortcut - perfect for web developers.
 
-![Version](https://img.shields.io/badge/version-1.3.0-blue)
+![Version](https://img.shields.io/badge/version-1.4.0-blue)
 ![Manifest](https://img.shields.io/badge/manifest-v3-green)
 ![License](https://img.shields.io/badge/license-MIT-orange)
 
@@ -18,17 +18,26 @@ A lightweight Chrome/Chromium extension for developers to quickly clear browser 
 
 ## Installation
 
-### From Source (Developer Mode)
+### Chrome - From Source (Developer Mode)
 
 1. Clone or download this repository
-2. Open Chrome/Chromium and navigate to `chrome://extensions/`
+2. Open Chrome and navigate to `chrome://extensions/`
 3. Enable **Developer mode** (toggle in top-right corner)
 4. Click **Load unpacked**
 5. Select the extension directory
 
-### From Chrome Web Store
+### Microsoft Edge - From Source (Developer Mode)
 
-*Coming soon*
+1. Clone or download this repository
+2. Open Edge and navigate to `edge://extensions/`
+3. Enable **Developer mode** (toggle in left sidebar)
+4. Click **Load unpacked**
+5. Select the extension directory
+
+### From Extension Stores
+
+- **Chrome Web Store**: *Coming soon*
+- **Microsoft Edge Add-ons**: *Coming soon*
 
 ## Usage
 
@@ -103,7 +112,14 @@ chrome-cache-clearer-plugin/
 
 ## Customizing Keyboard Shortcut
 
+### Chrome
 1. Navigate to `chrome://extensions/shortcuts`
+2. Find "Cache Clearer"
+3. Click the pencil icon to edit the shortcut
+4. Enter your preferred key combination
+
+### Microsoft Edge
+1. Navigate to `edge://extensions/shortcuts`
 2. Find "Cache Clearer"
 3. Click the pencil icon to edit the shortcut
 4. Enter your preferred key combination
@@ -132,8 +148,12 @@ For issues, questions, or suggestions, please visit:
 
 ## Changelog
 
+### v1.4.0
+- Added official Microsoft Edge support
+- Updated documentation for Edge installation and usage
+- Compatible with all Chromium-based browsers
+
 ### v1.3.0
-- Current stable release
 - Support for multiple data types (cache, cookies, storage, etc.)
 - Scope selection (current tab, all tabs, entire browser)
 - Terminal-style output display
@@ -141,4 +161,4 @@ For issues, questions, or suggestions, please visit:
 
 ---
 
-Made for developers who need to clear cache frequently during web development.
+Made for developers who need to clear cache frequently during web development on Chrome, Edge, and other Chromium-based browsers.

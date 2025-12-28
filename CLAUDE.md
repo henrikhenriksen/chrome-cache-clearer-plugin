@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Chrome/Chromium extension (Manifest V3) that clears browser cache with one click or keyboard shortcut. Designed for web developers who need to quickly clear cache during development.
+Browser extension for Chrome, Microsoft Edge, and other Chromium-based browsers (Manifest V3). Clears browser cache with one click or keyboard shortcut. Designed for web developers who need to quickly clear cache during development.
 
 ## Architecture
 
@@ -23,7 +23,14 @@ Chrome/Chromium extension (Manifest V3) that clears browser cache with one click
 ## Development
 
 Load as unpacked extension:
+
+**Chrome:**
 1. Navigate to `chrome://extensions/`
+2. Enable "Developer mode"
+3. Click "Load unpacked" and select this directory
+
+**Microsoft Edge:**
+1. Navigate to `edge://extensions/`
 2. Enable "Developer mode"
 3. Click "Load unpacked" and select this directory
 
