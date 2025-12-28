@@ -1,3 +1,19 @@
+// Theme detection and application
+function applyTheme() {
+  const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  if (isDark) {
+    document.body.classList.add('dark-theme');
+  } else {
+    document.body.classList.remove('dark-theme');
+  }
+}
+
+// Apply theme on load
+applyTheme();
+
+// Listen for theme changes
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', applyTheme);
+
 const btn = document.getElementById('clearBtn');
 const status = document.getElementById('status');
 const stats = document.getElementById('stats');
