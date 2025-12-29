@@ -3,38 +3,44 @@
 <head>
   <meta charset="UTF-8">
   <style>
-    /* CSS Variables for Light Theme (default) */
+    /* CSS Variables for Light Theme (default) - Safepoint Purple Scheme */
     :root {
       --bg-primary: #ffffff;
-      --bg-secondary: #f8f9fa;
-      --bg-tertiary: #e8e8e8;
-      --text-primary: #333;
-      --text-secondary: #555;
-      --text-tertiary: #666;
-      --text-muted: #888;
-      --text-hint: #999;
-      --border-color: #e0e0e0;
-      --border-subtle: #eee;
-      --border-medium: #ddd;
-      --terminal-bg: #1e1e1e;
-      --terminal-text: #0f0;
+      --bg-secondary: #f5f3f8;
+      --bg-tertiary: #e8e4f0;
+      --text-primary: #362652;
+      --text-secondary: #4d3a6b;
+      --text-tertiary: #6b5687;
+      --text-muted: #8c7ba8;
+      --text-hint: #a89ec0;
+      --border-color: #d4c9e3;
+      --border-subtle: #e8e4f0;
+      --border-medium: #c9bdd9;
+      --terminal-bg: #2a1f3d;
+      --terminal-text: #a89ec0;
+      --accent-primary: #7c6b9e;
+      --accent-secondary: #9987b8;
+      --accent-light: #b5a8cc;
     }
 
-    /* Dark Theme Variables */
+    /* Dark Theme Variables - Safepoint Purple Scheme */
     body.dark-theme {
-      --bg-primary: #1e1e1e;
-      --bg-secondary: #2d2d2d;
-      --bg-tertiary: #3d3d3d;
-      --text-primary: #e0e0e0;
-      --text-secondary: #c0c0c0;
-      --text-tertiary: #a0a0a0;
-      --text-muted: #808080;
-      --text-hint: #707070;
-      --border-color: #404040;
-      --border-subtle: #353535;
-      --border-medium: #4a4a4a;
-      --terminal-bg: #0d0d0d;
-      --terminal-text: #0f0;
+      --bg-primary: #1a1324;
+      --bg-secondary: #2a1f3d;
+      --bg-tertiary: #3d2f5b;
+      --text-primary: #e8e4f0;
+      --text-secondary: #d4c9e3;
+      --text-tertiary: #b5a8cc;
+      --text-muted: #9987b8;
+      --text-hint: #8c7ba8;
+      --border-color: #4d3a6b;
+      --border-subtle: #3d2f5b;
+      --border-medium: #5c4680;
+      --terminal-bg: #0f0a1a;
+      --terminal-text: #b5a8cc;
+      --accent-primary: #8c7ba8;
+      --accent-secondary: #a89ec0;
+      --accent-light: #c9bdd9;
     }
 
     body {
@@ -97,23 +103,27 @@
       font-size: 14px;
       font-weight: 600;
       color: white;
-      background: #e74c3c;
+      background: linear-gradient(135deg, #7c6b9e 0%, #9987b8 100%);
       border: none;
       border-radius: 6px;
       cursor: pointer;
-      transition: background 0.2s;
+      transition: all 0.3s;
+      box-shadow: 0 2px 8px rgba(124, 107, 158, 0.3);
     }
 
     #clearBtn:hover {
-      background: #c0392b;
+      background: linear-gradient(135deg, #6b5687 0%, #8c7ba8 100%);
+      box-shadow: 0 4px 12px rgba(124, 107, 158, 0.4);
+      transform: translateY(-1px);
     }
 
     #clearBtn:active {
-      transform: scale(0.98);
+      transform: translateY(0) scale(0.98);
     }
 
     #clearBtn.success {
-      background: #27ae60;
+      background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
+      box-shadow: 0 2px 8px rgba(39, 174, 96, 0.3);
     }
 
     #clearBtn:disabled {
@@ -185,11 +195,11 @@
     }
 
     .cleared-item-icon.success {
-      color: #27ae60;
+      color: #2ecc71;
     }
 
     .cleared-item-icon.skipped {
-      color: #999;
+      color: var(--text-muted);
     }
 
     .cleared-item-name {
@@ -263,12 +273,13 @@
 
     .footer-link a {
       font-size: 11px;
-      color: var(--text-muted);
+      color: var(--accent-primary);
       text-decoration: none;
+      transition: color 0.2s;
     }
 
     .footer-link a:hover {
-      color: var(--text-secondary);
+      color: var(--accent-secondary);
       text-decoration: underline;
     }
 
@@ -288,14 +299,15 @@
       background: none;
       border: none;
       font-size: 10px;
-      color: var(--text-tertiary);
+      color: var(--accent-primary);
       cursor: pointer;
       padding: 0;
       text-decoration: underline;
+      transition: color 0.2s;
     }
 
     .select-btn:hover {
-      color: var(--text-primary);
+      color: var(--accent-secondary);
     }
 
     .scope-selector {
@@ -348,19 +360,19 @@
 
     #terminal .line::before {
       content: '> ';
-      color: #888;
+      color: var(--text-muted);
     }
 
     #terminal .success {
-      color: #0f0;
+      color: #2ecc71;
     }
 
     #terminal .error {
-      color: #f55;
+      color: #e74c3c;
     }
 
     #terminal .info {
-      color: #5af;
+      color: var(--accent-light);
     }
   </style>
 </head>
