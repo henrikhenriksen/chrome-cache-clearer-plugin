@@ -16,10 +16,12 @@ Browser extension for Chrome, Microsoft Edge, and other Chromium-based browsers 
 ## Architecture
 
 - **manifest.json** - Extension manifest (Manifest V3), requires `browsingData`, `storage`, `cookies`, and `tabs` permissions
-- **popup.html** - Extension popup UI with inline CSS, theme support via CSS variables, settings toggles, and stats display
+- **popup.html** - Extension popup UI with inline CSS, Safepoint purple theme support via CSS variables, settings toggles, and stats display
 - **popup.js** - Click handler, theme detection, settings management, scope handling, and stats display logic
 - **background.js** - Service worker that handles keyboard shortcut commands and badge notifications
-- **icon*.png** - Extension icons (16, 48, 128px)
+- **icon.svg** - Master SVG icon with Safepoint branding (purple checkmark logo)
+- **icon*.png** - Extension icons (16, 48, 128px) generated from SVG
+- **ICONS_README.md** - Icon generation instructions and branding guidelines
 
 ## Key Technologies
 
@@ -30,10 +32,11 @@ Browser extension for Chrome, Microsoft Edge, and other Chromium-based browsers 
 - `chrome.tabs` - Queries tabs for origin-based clearing and hard reload functionality
 
 ### Theme System
-- **CSS Variables** - Theme colors defined in `:root` and `.dark-theme` selectors
+- **CSS Variables** - Theme colors defined in `:root` and `.dark-theme` selectors using Safepoint purple color scheme
 - **Media Query** - `window.matchMedia('(prefers-color-scheme: dark)')` detects browser theme
 - **Automatic Switching** - Listens for theme changes and applies appropriate CSS class dynamically
 - **Smooth Transitions** - Theme changes animated with CSS transitions
+- **Branding Colors** - Purple gradient (#7c6b9e → #9987b8) from Safepoint brand identity
 
 ## Development
 
@@ -87,12 +90,21 @@ No build process required - plain HTML/JS that runs directly in the browser.
 9. **Clear Operation** (lines 249-401) - Main clearing logic with error handling
 
 ### CSS Variables
-The extension uses CSS custom properties for theming:
-- **Light Theme** - Default values in `:root`
-- **Dark Theme** - Overrides in `body.dark-theme`
-- **Variable Categories**: background colors, text colors, borders, terminal styling
+The extension uses CSS custom properties for theming with Safepoint purple branding:
+- **Light Theme** - Default values in `:root` with purple accents on white backgrounds
+- **Dark Theme** - Overrides in `body.dark-theme` with deep purple backgrounds
+- **Variable Categories**: background colors, text colors, borders, terminal styling, accent colors
+- **Accent Colors**: `--accent-primary`, `--accent-secondary`, `--accent-light` for interactive elements
 
-All color values use semantic naming (`--bg-primary`, `--text-secondary`, etc.) for maintainable theme switching.
+All color values use semantic naming (`--bg-primary`, `--text-secondary`, `--accent-primary`) for maintainable theme switching.
+
+**Safepoint Color Palette:**
+- Primary Dark Purple: `#362652`
+- Medium Purple: `#7c6b9e`
+- Light Purple: `#9987b8`
+- Very Light Purple: `#a89ec0`
+
+Buttons use a purple gradient (`#7c6b9e → #9987b8`) matching the Safepoint brand identity.
 
 ## Testing
 
